@@ -8,7 +8,6 @@
 <a href="../../actions"><img alt="Desktop/Server CI" src="https://img.shields.io/github/actions/workflow/status/onedsix/onedsix/gradle.yml?label=Desktop%20%26%20Server"></a>
 <a href="../../actions"><img alt="Launcher CI" src="https://img.shields.io/github/actions/workflow/status/onedsix/onedsix/electron.yml?label=Launcher"></a>
 <a href="/.github/CONTRIBUTING.md"><img alt="Contributors" src="https://img.shields.io/badge/Contributions-Read_Me%21-blue"></a>
-<a href="/LICENSE"><img alt="GitHub License" src="https://img.shields.io/github/license/onedsix/onedsix"></a>
 <a href="https://jitpack.io/#onedsix/onedsix/-SNAPSHOT"><img alt="JitPack" src="https://img.shields.io/jitpack/version/onedsix/onedsix"></a>
 
 This project was originally started because I wanted to make a DnD-like RPG game, homebrew and all. Instead, it has grown quite significantly in scope since then and has basically become its own engine on top of LibGDX.
