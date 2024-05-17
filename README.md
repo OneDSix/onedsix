@@ -5,20 +5,20 @@
 ## A Data-Gen based RPG Game/Engine
 
 <a href="https://discord.gg/aNjm3b6eYJ"><img alt="Discord Link" src="https://img.shields.io/discord/969376256640569474?logo=discord&label=1D6%20Discord%20Server"></a>
-<a href="https://github.com/GirlInPurple/onedsix/actions"><img alt="Desktop/Server CI" src="https://img.shields.io/github/actions/workflow/status/GirlInPurple/onedsix/gradle.yml?label=Desktop%20%26%20Server"></a>
-<a href="https://github.com/GirlInPurple/onedsix/actions"><img alt="Launcher CI" src="https://img.shields.io/github/actions/workflow/status/GirlInPurple/onedsix/electron.yml?label=Launcher"></a>
-<a href="https://github.com/GirlInPurple/onedsix/blob/master/.github/CONTRIBUTING.md"><img alt="Contributors" src="https://img.shields.io/badge/Contributions-Read_Me%21-blue"></a>
-<a href="https://github.com/GirlInPurple/onedsix/blob/master/LICENSE"><img alt="GitHub License" src="https://img.shields.io/github/license/GirlInPurple/onedsix"></a>
-<a href="https://jitpack.io/#GirlInPurple/onedsix/-SNAPSHOT"><img alt="JitPack" src="https://img.shields.io/jitpack/version/GirlInPurple/onedsix"></a>
+<a href="../../actions"><img alt="Desktop/Server CI" src="https://img.shields.io/github/actions/workflow/status/onedsix/onedsix/gradle.yml?label=Desktop%20%26%20Server"></a>
+<a href="../../actions"><img alt="Launcher CI" src="https://img.shields.io/github/actions/workflow/status/onedsix/onedsix/electron.yml?label=Launcher"></a>
+<a href="/.github/CONTRIBUTING.md"><img alt="Contributors" src="https://img.shields.io/badge/Contributions-Read_Me%21-blue"></a>
+<a href="/LICENSE"><img alt="GitHub License" src="https://img.shields.io/github/license/onedsix/onedsix"></a>
+<a href="https://jitpack.io/#onedsix/onedsix/-SNAPSHOT"><img alt="JitPack" src="https://img.shields.io/jitpack/version/onedsix/onedsix"></a>
 
 This project was originally started because I wanted to make a DnD-like RPG game, homebrew and all. Instead, it has grown quite significantly in scope since then and has basically become its own engine on top of LibGDX.
 
 This project is based around Data-gen and allowing for any code you want to be run. Being open-source and lightweight, it makes this very easy and fast to add new features, and/or to code or your own mod.
 
-Install instructions are located [here](https://github.com/GirlInPurple/onedsix/wiki/For-Users).
+Install instructions are located [here](../../wiki/For-Users).
 
-I highly recommend you check out the rest of the [wiki](https://github.com/GirlInPurple/onedsix/wiki), as it has far more info than here.\
-We also have a JavaDoc (TBD) and [Contribution Guidelines](https://github.com/GirlInPurple/onedsix/blob/master/CONTRIBUTING.md) if you're interested.
+I highly recommend you check out the rest of the [wiki](../../wiki), as it has far more info than here.\
+We also have a JavaDoc (TBD) and [Contribution Guidelines](/CONTRIBUTING.md) if you're interested.
 
 ## Licensing
 
