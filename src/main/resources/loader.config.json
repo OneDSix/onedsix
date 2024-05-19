@@ -1,0 +1,12 @@
+{
+  "target": {
+    "entrypoint": "onedsix.Entrypoint",
+    "version": "1.2.0",
+    "side": "CLIENT"
+  },
+  "loader": {
+    "target": {
+      "passArgs": true
+    }
+  }
+}

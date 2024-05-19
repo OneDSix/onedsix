@@ -12,7 +12,7 @@ sourceSets {
 			srcDirs = ["src/main/java/"]
 		}
 		resources {
-			srcDirs = ["src/main/resources/", "assets/"]
+			srcDirs = ["src/main/resources/"]
 		}
 	}
 
@@ -21,7 +21,7 @@ sourceSets {
 			srcDirs = ["src/main/java/"]
 		}
 		resources {
-			srcDirs = ["src/main/resources/", "assets/"]
+			srcDirs = ["src/main/resources/"]
 		}
 	}
 }
@@ -39,7 +39,6 @@ repositories {
 	maven { url "https://nexus.velocitypowered.com/repository/maven-public/" }
 	maven { url 'https://maven.minecraftforge.net/' }
 	maven { url "https://repo.spongepowered.org/repository/maven-public/" }
-	//maven { url "https://maven.fabricmc.net/" }
 }
 
 dependencies {
