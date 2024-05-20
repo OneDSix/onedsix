@@ -4,10 +4,12 @@
 
 ## A Data-Gen based RPG Game/Engine
 
-<a href="https://discord.gg/aNjm3b6eYJ"><img alt="Discord Link" src="https://img.shields.io/discord/969376256640569474?logo=discord&label=1D6%20Discord%20Server"></a>
 <a href="../../actions"><img alt="Desktop/Server CI" src="https://img.shields.io/github/actions/workflow/status/onedsix/onedsix/gradle.yml?label=Build%20Status"></a>
 <a href="/.github/CONTRIBUTING.md"><img alt="Contributors" src="https://img.shields.io/badge/Contributions-Read_Me%21-blue"></a>
 <a href="https://jitpack.io/#OneDSix/onedsix/main-SNAPSHOT"><img alt="JitPack" src="https://img.shields.io/jitpack/version/OneDSix/onedsix"></a>
+
+<a href="https://discord.gg/aNjm3b6eYJ"><img alt="Discord Link" src="https://img.shields.io/discord/969376256640569474?logo=discord&label=Discord"></a>
+<a href="https://matrix.to/#/!QlLHLtAHIewcitWaxW:matrix.org?via=matrix.org"><img alt="Matrix Room Link" src="https://img.shields.io/matrix/1d6%3Amatrix.org?logo=matrix&label=Matrix"></a>
 
 This project was originally started because I wanted to make a DnD-like RPG game, homebrew and all. Instead, it has grown quite significantly in scope since then and has basically become its own engine on top of LibGDX.
 
