@@ -1,10 +1,82 @@
-plugins {
-	id 'java'
-	id "java-library"
-	id "eclipse"
+allprojects {
+	apply plugin: "java"
+	apply plugin: "java-library"
+	apply plugin: "eclipse"
+	apply plugin: "idea"
+	apply plugin: "application"
+
+	sourceCompatibility = 21
+	[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+	repositories {
+		gradlePluginPortal()
+		mavenCentral()
+		mavenLocal()
+		google()
+
+		maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+		maven { url "https://oss.sonatype.org/content/repositories/releases/" }
+		maven { url "https://jitpack.io" }
+		maven { url "https://libraries.minecraft.net" }
+		maven { url "https://nexus.velocitypowered.com/repository/maven-public/" }
+		maven { url "https://maven.minecraftforge.net/" }
+		maven { url "https://repo.spongepowered.org/repository/maven-public/" }
+	}
+
+	dependencies {
+
+		// LibGDX
+		api "com.badlogicgames.gdx:gdx:$gdxVersion"
+		api "com.badlogicgames.gdx:gdx-ai:$aiVersion"
+		api "com.badlogicgames.ashley:ashley:$ashleyVersion"
+		api "com.badlogicgames.box2dlights:box2dlights:$box2DLightsVersion"
+		api "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+		api "com.badlogicgames.gdx-controllers:gdx-controllers-core:$gdxControllersVersion"
+		api "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
+
+		// Desktop Specific
+		api "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
+		api "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+		api "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
+		api "com.badlogicgames.gdx-controllers:gdx-controllers-desktop:$gdxControllersVersion"
+		api "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
+
+		// LibGDX GUI Libraries
+		api "com.kotcrab.vis:vis-ui:$visuiVersion"
+
+		// Utilities
+		implementation 'org.projectlombok:lombok:1.18.32'
+		annotationProcessor 'org.projectlombok:lombok:1.18.32'
+
+		// Logging
+		implementation "org.slf4j:slf4j-api:1.7.32"
+		implementation "ch.qos.logback:logback-classic:1.2.6"
+
+		// JSON & TOML
+		implementation "com.google.code.gson:gson:2.10.1"
+		implementation 'com.moandjiezana.toml:toml4j:0.7.2'
+
+		// SVG
+		implementation "com.github.weisj:jsvg:1.4.0"
+
+		// JavaScript
+		implementation 'org.openjdk.nashorn:nashorn-core:15.4'
+
+		// Networking
+		implementation 'kryonet:kryonet:2.21'
+		implementation 'com.esotericsoftware.kryo:kryo:2.24.0'
+		//implementation "com.github.OneDSix:rkon-core:1.1.3"
+
+		// Commands & CLI
+		compileOnly 'com.mojang:brigadier:1.0.18'
+		implementation 'info.picocli:picocli:4.7.6'
+		annotationProcessor 'info.picocli:picocli-codegen:4.7.6'
+
+		// Other PositionUtils
+		compileOnly "org.jetbrains:annotations:23.0.0"
+		implementation 'org.apache.commons:commons-lang3:3.14.0'
+	}
 }
-sourceCompatibility = 1.8
-[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
 sourceSets {
 	server {
@@ -26,93 +98,7 @@ sourceSets {
 	}
 }
 
-repositories {
-	gradlePluginPortal()
-	mavenCentral()
-	mavenLocal()
-	google()
-
-	maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
-	maven { url "https://oss.sonatype.org/content/repositories/releases/" }
-	maven { url "https://jitpack.io" }
-	maven { url "https://libraries.minecraft.net" }
-	maven { url "https://nexus.velocitypowered.com/repository/maven-public/" }
-	maven { url 'https://maven.minecraftforge.net/' }
-	maven { url "https://repo.spongepowered.org/repository/maven-public/" }
-}
-
-dependencies {
-
-    // LibGDX
-    api "com.badlogicgames.gdx:gdx:$gdxVersion"
-    api "com.badlogicgames.gdx:gdx-ai:$aiVersion"
-    api "com.badlogicgames.ashley:ashley:$ashleyVersion"
-    api "com.badlogicgames.box2dlights:box2dlights:$box2DLightsVersion"
-    api "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
-    api "com.badlogicgames.gdx-controllers:gdx-controllers-core:$gdxControllersVersion"
-    api "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
-
-	// Desktop Specific
-	api "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
-	api "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
-	api "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
-	api "com.badlogicgames.gdx-controllers:gdx-controllers-desktop:$gdxControllersVersion"
-	api "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
-
-	// Utilities
-	implementation 'org.projectlombok:lombok:1.18.32'
-	annotationProcessor 'org.projectlombok:lombok:1.18.32'
-
-	// Logging
-	implementation "org.slf4j:slf4j-api:1.7.32"
-	implementation "ch.qos.logback:logback-classic:1.2.6"
-
-    // LibGDX GUI Library
-    api "com.kotcrab.vis:vis-ui:$visuiVersion"
-
-    // JSON
-    implementation "com.google.code.gson:gson:2.10.1"
-
-    // TOML
-    implementation 'com.moandjiezana.toml:toml4j:0.7.2'
-
-    // SVG
-    implementation "com.github.weisj:jsvg:1.4.0"
-
-    // JavaScript
-    implementation 'org.openjdk.nashorn:nashorn-core:15.4'
-
-    // Networking
-    implementation 'kryonet:kryonet:2.21'
-    implementation 'com.esotericsoftware.kryo:kryo:2.24.0'
-
-    // Commands & CLI
-    compileOnly 'com.mojang:brigadier:1.0.18'
-    implementation 'info.picocli:picocli:4.7.6'
-    annotationProcessor 'info.picocli:picocli-codegen:4.7.6'
-
-    // Other Utils
-    compileOnly "org.jetbrains:annotations:23.0.0"
-    implementation 'org.apache.commons:commons-lang3:3.14.0'
-}
-
 configurations {
 	serverCompile.extendsFrom compile
 	clientCompile.extendsFrom compile
-}
-
-task serverJar(type: Jar) {
-	from sourceSets.server.output
-	manifest {
-		attributes 'Main-Class': 'onedsix.server.OnedsixServer'
-	}
-	archiveFileName = appName + 'server.jar'
-}
-
-task clientJar(type: Jar) {
-	from sourceSets.client.output
-	manifest {
-		attributes 'Main-Class': 'onedsix.client.OndsixClient'
-	}
-	archiveFileName = appName + '-client.jar'
 }
